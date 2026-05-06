@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Stock Alerts: How Smart Alerts Beat Price Alerts | tikrr</title>
+  <meta name="description" content="Price alerts are dumb thresholds. AI stock alerts understand context: earnings impact, RSI divergence, sector rotation, sentiment shifts. Learn the difference.">
+  <meta property="og:title" content="AI Stock Alerts: How Smart Alerts Beat Price Alerts">
+  <meta property="og:description" content="Traditional price alerts just tell you a number was hit. AI stock alerts tell you why it matters. Here's how smart alerts work and why they're better.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://tikrr-competitive-intel.github.io/blog/ai-stock-alerts.html">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .blog-post { max-width: 780px; margin: 0 auto; padding: 40px 24px 60px; }
+    .blog-post h1 { font-size: 2.2rem; line-height: 1.3; margin-bottom: 12px; }
+    .blog-meta { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 32px; }
+    .blog-post h2 { font-size: 1.5rem; margin: 40px 0 16px; color: var(--accent2); }
+    .blog-post h3 { font-size: 1.15rem; margin: 28px 0 12px; color: var(--text); }
+    .blog-post p { margin-bottom: 16px; font-size: 1.05rem; line-height: 1.75; }
+    .blog-post ul, .blog-post ol { margin: 0 0 16px 24px; }
+    .blog-post li { margin-bottom: 8px; font-size: 1.05rem; line-height: 1.6; }
+    .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 32px; }
+    .toc h3 { margin: 0 0 12px; font-size: 1rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+    .toc ol { margin: 0; padding-left: 20px; }
+    .toc li { font-size: 0.95rem; margin-bottom: 6px; }
+    .cta-box { background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%); border: 1px solid var(--accent); border-radius: 12px; padding: 32px; text-align: center; margin: 48px 0 0; }
+    .cta-box h3 { color: var(--accent2); margin-bottom: 8px; }
+    .cta-box p { color: var(--text-dim); margin-bottom: 16px; }
+    .cta-btn { display: inline-block; background: var(--accent); color: #fff; padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: background 0.2s; }
+    .cta-btn:hover { background: #5a4bd4; text-decoration: none; }
+    blockquote { border-left: 3px solid var(--accent); padding: 12px 20px; margin: 20px 0; background: var(--surface); border-radius: 0 8px 8px 0; color: var(--text-dim); font-style: italic; }
+    .alert-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .alert-box { padding: 20px; border-radius: 8px; }
+    .alert-dumb { background: rgba(225,112,85,0.08); border: 1px solid rgba(225,112,85,0.2); }
+    .alert-smart { background: rgba(0,206,201,0.08); border: 1px solid rgba(0,206,201,0.2); }
+    .alert-dumb h4 { color: var(--red); margin-bottom: 8px; }
+    .alert-smart h4 { color: var(--accent2); margin-bottom: 8px; }
+    .alert-box p { font-size: 0.95rem; margin-bottom: 0; }
+    .internal-links { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin: 32px 0; }
+    .internal-links h4 { margin-bottom: 8px; color: var(--text-dim); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="../" class="logo">tikrr<span> competitive intel</span></a>
+      <a href="../">Overview</a>
+      <a href="../competitors/">Competitors</a>
+      <a href="../seo-gaps.html">SEO Gaps</a>
+      <a href="../reddit-complaints.html">Reddit</a>
+      <a href="../free-tools.html">Free Tools</a>
+      <a href="./">Blog</a>
+    </div>
+  </nav>
+
+  <article class="blog-post">
+    <h1>AI Stock Alerts: How Smart Alerts Beat Price Alerts</h1>
+    <div class="blog-meta">Updated May 2026 &middot; 8 min read</div>
+
+    <div class="toc">
+      <h3>Table of Contents</h3>
+      <ol>
+        <li><a href="#price-alerts">The Problem with Price Alerts</a></li>
+        <li><a href="#ai-alerts">What Makes AI Stock Alerts Different</a></li>
+        <li><a href="#types">Types of Smart Alerts</a></li>
+        <li><a href="#examples">Real-World Examples</a></li>
+        <li><a href="#earning">Earnings Impact Alerts</a></li>
+        <li><a href="#technical">Technical Signal Alerts</a></li>
+        <li><a href="#sector">Sector Rotation Signals</a></li>
+        <li><a href="#reducing-noise">Reducing Alert Noise</a></li>
+        <li><a href="#setup">Setting Up Smart Alerts</a></li>
+      </ol>
+    </div>
+
+    <p>You set a price alert for AAPL at $200. A week later, it goes off. AAPL hit $200. Great. Now what? Is it breaking out on strong volume? Is it bouncing off support? Did a product launch drive it? Is it hitting resistance on low volume and about to reverse?</p>
+
+    <p>Your price alert can't tell you any of that. It just says "$200." You still have to do all the research yourself to figure out whether this matters and what to do about it.</p>
+
+    <p>AI stock alerts are different. They don't just tell you something happened. They tell you why it happened, whether it matters, and what context surrounds it. That's the difference between a smoke detector and a fire alarm that tells you where the fire is.</p>
+
+    <h2 id="price-alerts">The Problem with Price Alerts</h2>
+
+    <p>Price alerts have been around forever. Every brokerage app, every finance website, every watchlist tool offers them. They're simple: set a threshold, get notified when it's crossed. The problem is they're too simple.</p>
+
+    <h3>They're Context-Free</h3>
+    <p>A price alert tells you a number was hit. It doesn't tell you the volume, the momentum, the sentiment, the catalyst, or the technical setup. You get the "what" without the "why" or the "so what."</p>
+
+    <h3>They Create False Urgency</h3>
+    <p>Every price alert feels urgent. Your phone buzzes, you see a stock crossed your threshold, and you feel like you need to act. But most price alerts are noise. The stock crossed $200 on low volume with no catalyst? That's not urgent. The stock crossed $200 on 5x volume after an earnings beat? That's urgent. Price alerts treat both the same.</p>
+
+    <h3>They Miss What Matters</h3>
+    <p>The most important market signals often aren't price-based. A sentiment shift on social media. An unusual options activity spike. A key executive departure. A supply chain disruption. Price alerts catch none of these.</p>
+
+    <h3>They're Static</h3>
+    <p>You set a price alert at $200. The stock hits $200, you get notified, you decide it's not actionable. But now what? You have to manually set a new alert. AI alerts adapt continuously, monitoring for conditions, not just prices.</p>
+
+    <h2 id="ai-alerts">What Makes AI Stock Alerts Different</h2>
+
+    <p>AI stock alerts, sometimes called smart alerts or intelligent alerts, use artificial intelligence to monitor multiple data streams and notify you when something meaningful happens. They're not triggered by a single threshold. They're triggered by a combination of factors that together indicate something worth your attention.</p>
+
+    <p>Here's the core difference: price alerts are event-driven (something crossed a line). AI alerts are intelligence-driven (something meaningful is happening).</p>
+
+    <div class="alert-compare">
+      <div class="alert-dumb">
+        <h4>Price Alert</h4>
+        <p>"AAPL crossed $200"</p>
+      </div>
+      <div class="alert-smart">
+        <h4>AI Smart Alert</h4>
+        <p>"AAPL broke above $200 resistance on 3x average volume. Social sentiment has shifted bullish over the past 48 hours. 2 analysts upgraded this week. This looks like a genuine breakout."</p>
+      </div>
+    </div>
+
+    <p>Same event. Completely different information value. The price alert gives you a data point. The smart alert gives you an analysis.</p>
+
+    <h2 id="types">Types of Smart Alerts</h2>
+
+    <p>AI stock alerts come in several flavors, each monitoring different data streams:</p>
+
+    <h3>News-Driven Alerts</h3>
+    <p>Triggered when significant news affects a stock on your watchlist. The AI filters out noise (routine press releases, minor updates) and surfaces news that's likely to move the stock. It also provides context: how the news compares to expectations, what the likely impact is, and how the market is reacting.</p>
+
+    <h3>Sentiment Alerts</h3>
+    <p>Triggered when social media sentiment for a stock shifts meaningfully. These alerts can catch sentiment changes hours or days before they show up in price action. "Social discussion about XYZ has turned increasingly bullish over the past 24 hours, with a 40% increase in positive mentions."</p>
+
+    <h3>Technical Alerts</h3>
+    <p>Go beyond simple price thresholds to include pattern completions, support/resistance breaks with volume confirmation, unusual volume, and divergence between price and momentum indicators. These alerts are what technical traders manually scan charts to find.</p>
+
+    <h3>Fundamental Alerts</h3>
+    <p>Triggered by SEC filings, earnings pre-announcements, guidance changes, insider trading activity, or analyst rating changes. These catch the events that often move stocks 5-15% in a single day.</p>
+
+    <h3>Options Activity Alerts</h3>
+    <p>Unusual options activity often signals that informed traders are positioning for a move. AI can detect when options volume is significantly above normal and alert you before the move happens.</p>
+
+    <h2 id="examples">Real-World Examples</h2>
+
+    <p>Let's look at how smart alerts work in practice with some real scenarios:</p>
+
+    <h3>Scenario 1: Earnings Surprise</h3>
+    <div class="alert-compare">
+      <div class="alert-dumb">
+        <h4>Price Alert</h4>
+        <p>"MSFT is up 5% after hours"</p>
+      </div>
+      <div class="alert-smart">
+        <h4>AI Alert</h4>
+        <p>"MSFT reported Q3 earnings: revenue $56.2B (beat by $1.8B), EPS $2.94 (beat by $0.18). Azure growth accelerated to 31%. Guidance raised. After-hours move: +5.2% on strong volume. Peer impact: likely positive for cloud sector."</p>
+      </div>
+    </div>
+
+    <h3>Scenario 2: Sentiment Shift</h3>
+    <div class="alert-compare">
+      <div class="alert-dumb">
+        <h4>No Alert</h4>
+        <p>(Price alerts don't detect sentiment changes)</p>
+      </div>
+      <div class="alert-smart">
+        <h4>AI Alert</h4>
+        <p>"Social sentiment for TSLA has shifted from bearish to neutral over 72 hours. Discussion volume up 60%. Driver: positive delivery data from China. Historical pattern: similar sentiment shifts preceded 3-5% price moves within 5 trading days."</p>
+      </div>
+    </div>
+
+    <h3>Scenario 3: Sector Rotation</h3>
+    <div class="alert-compare">
+      <div class="alert-dumb">
+        <h4>No Alert</h4>
+        <p>(Price alerts don't detect sector patterns)</p>
+      </div>
+      <div class="alert-smart">
+        <h4>AI Alert</h4>
+        <p>"Institutional money is rotating from growth to value. Your watchlist stocks in tech are seeing outflows while energy and financials are seeing inflows. This pattern has historically lasted 2-4 weeks."</p>
+      </div>
+    </div>
+
+    <h2 id="earning">Earnings Impact Alerts</h2>
+
+    <p>Earnings season is when smart alerts really shine. Instead of waiting for the headline number and trying to figure out if it's good or bad, AI alerts provide instant context:</p>
+
+    <ul>
+      <li><strong>Beat or miss vs consensus</strong> — How did results compare to analyst expectations?</li>
+      <li><strong>Beat or miss vs whisper numbers</strong> — How did they compare to the real expectations the market was pricing in?</li>
+      <li><strong>Forward guidance</strong> — Did the company raise, maintain, or lower guidance?</li>
+      <li><strong>Key metrics</strong> — Revenue growth, margins, user growth, or whatever metrics matter for that company</li>
+      <li><strong>Peer implications</strong> — How might this earnings report affect other stocks in the same sector?</li>
+    </ul>
+
+    <p>This context is what separates an informed reaction from a knee-jerk one. And it arrives in seconds, not after you've spent 20 minutes reading the earnings release.</p>
+
+    <h2 id="technical">Technical Signal Alerts</h2>
+
+    <p>Technical analysis is where AI adds the most value over manual chart reading. AI can simultaneously monitor hundreds of stocks for technical patterns that would take a human analyst hours to identify:</p>
+
+    <ul>
+      <li><strong>RSI divergence</strong> — When price makes a new high but RSI doesn't (bearish) or vice versa (bullish)</li>
+      <li><strong>Volume breakouts</strong> — Price breaking a key level on significantly above-average volume</li>
+      <li><strong>Moving average crossovers</strong> — Golden crosses, death crosses, and other MA signals</li>
+      <li><strong>Pattern completions</strong> — Head and shoulders, cup and handle, flags, and other classic patterns</li>
+      <li><strong>Support/resistance tests</strong> — When a stock approaches a key level for the third or fourth time</li>
+    </ul>
+
+    <p>The key advantage is that AI does this continuously across your entire watchlist, not just the 2-3 stocks you have charts open for.</p>
+
+    <h2 id="sector">Sector Rotation Signals</h2>
+
+    <p>One of the most valuable smart alert types is sector rotation detection. When money flows from one sector to another, it affects every stock in both sectors. Traditional price alerts can't detect this. AI can.</p>
+
+    <p>Sector rotation alerts can tell you:</p>
+
+    <ul>
+      <li>When institutional money is moving from growth to value (or vice versa)</li>
+      <li>When a sector is seeing unusual fund inflows or outflows</li>
+      <li>When sector ETFs are breaking key levels while individual stocks aren't</li>
+      <li>When the rotation pattern matches historical precedents</li>
+    </ul>
+
+    <p>This is the kind of macro signal that institutional traders pay thousands for. AI makes it accessible to everyone.</p>
+
+    <h2 id="reducing-noise">Reducing Alert Noise</h2>
+
+    <p>The biggest complaint about alerts in general is noise. Too many notifications, most of them irrelevant. AI smart alerts actually solve this problem instead of making it worse.</p>
+
+    <p>Here's how AI reduces noise:</p>
+
+    <ul>
+      <li><strong>Multi-factor filtering</strong> — Alerts only trigger when multiple signals align, not when a single threshold is crossed</li>
+      <li><strong>Relevance scoring</strong> — Each alert gets a relevance score so you can prioritize</li>
+      <li><strong>Confidence levels</strong> — High-confidence alerts surface first; low-confidence ones are available but not pushy</li>
+      <li><strong>Deduplication</strong> — AI knows when an alert is essentially the same signal it already told you about</li>
+      <li><strong>Learning your preferences</strong> — Over time, the system learns which alerts you act on and which you ignore</li>
+    </ul>
+
+    <p>The result is fewer, more meaningful notifications. You get alerted about things that matter, not every price tick.</p>
+
+    <h2 id="setup">Setting Up Smart Alerts</h2>
+
+    <p>Getting started with AI stock alerts is straightforward:</p>
+
+    <ol>
+      <li><strong>Define your watchlist</strong> — Add the stocks you care about. Start with 10-15 if you're new to this.</li>
+      <li><strong>Set your priorities</strong> — Tell the system what matters most to you: earnings, sentiment, technical signals, or news.</li>
+      <li><strong>Configure delivery</strong> — Choose how you want to be notified: email, app notification, or daily digest.</li>
+      <li><strong>Review and adjust</strong> — After a week, review which alerts were useful and adjust your settings.</li>
+    </ol>
+
+    <p><a href="https://tikrr.online">tikrr</a> delivers smart alerts as part of its daily market intelligence platform. Instead of setting individual alerts for each stock, you get a comprehensive daily brief that includes all the smart signals for your watchlist, scored and contextualized.</p>
+
+    <p>For a broader look at AI-powered watchlists, check out our comparison of <a href="ai-stock-watchlist.html">AI stock watchlists vs traditional watchlists</a>.</p>
+
+    <div class="internal-links">
+      <h4>Related Reading</h4>
+      <ul>
+        <li><a href="ai-stock-watchlist.html">AI Stock Watchlists vs Traditional Watchlists</a></li>
+        <li><a href="ai-stock-analysis.html">AI Stock Analysis in 2026: What Actually Works</a></li>
+        <li><a href="ai-market-brief.html">What Is an AI Market Brief and Why You Need One in 2026</a></li>
+      </ul>
+    </div>
+
+    <div class="cta-box">
+      <h3>Get Smart Alerts for Your Watchlist</h3>
+      <p>tikrr's AI monitors your stocks across 50+ sources and delivers context-aware alerts, not just price notifications.</p>
+      <a href="https://tikrr.online" class="cta-btn">Try tikrr Free</a>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <p>Competitive intelligence analysis &middot; <a href="https://tikrr.online">tikrr.online</a></p>
+    </div>
+  </footer>
+</body>
+</html>
